@@ -76,7 +76,7 @@ class LeaguesViewController: UIViewController, UITableViewDataSource, UITableVie
         //let movie = movies[indexPath.row]
         //cell.configure(movie: movie)
         //return cell
-    }
+    //}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         movies.count
@@ -87,4 +87,4 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     navigationController?.pushViewController(leaguesViewController, animated: true)
 }
 
-}
+//}
