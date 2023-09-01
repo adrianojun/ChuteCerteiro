@@ -6,8 +6,8 @@ struct Football: Decodable {
     let leagueId: String
     let leagueName: String
     let temporadaLiga: String
-    let leagueLogo: URL
-    let countryLogo: URL
+    let leagueLogo: String
+    let countryLogo: String
 
     enum CodingKeys: String, CodingKey {
         case countryId = "country_id"

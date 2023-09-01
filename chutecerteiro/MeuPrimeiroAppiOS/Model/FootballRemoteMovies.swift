@@ -8,5 +8,5 @@
 import Foundation
 
 struct FootballRemoteLeagues: Decodable {
-    let leagues: [FootballLeague] // Assuming FootballLeague is the struct for a single league
+    let leagues: [Football] // Assuming FootballLeague is the struct for a single league
 }

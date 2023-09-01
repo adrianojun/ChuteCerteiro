@@ -2,28 +2,28 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var movieTitle: UILabel!
-    @IBOutlet weak var movieImageView: UIImageView!
-    @IBOutlet weak var movieRating: UILabel!
-    @IBOutlet weak var movieDescription: UILabel!
+    @IBOutlet weak var footballCountryName: UILabel!
+    @IBOutlet weak var footballlCountryLogo: UIImageView!
+    //@IBOutlet weak var movieRating: UILabel!
+    //@IBOutlet weak var movieDescription: UILabel!
     
-    var movie: Movie!
+    var football: Football!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        movieImageView.layer.cornerRadius = 8
-        movieImageView.layer.masksToBounds = true
-        movieImageView.contentMode = .scaleAspectFill
-        movieImageView.backgroundColor = .blue
+        footballlCountryLogo.layer.cornerRadius = 8
+        footballlCountryLogo.layer.masksToBounds = true
+        footballlCountryLogo.contentMode = .scaleAspectFill
+        footballlCountryLogo.backgroundColor = .blue
 
-        configure(with: movie)
+        configure(with: football)
     }
 
-    func configure(with movie: Movie) {
-        movieTitle.text = movie.title
-        movieImageView.download(path: movie.posterPath)
-        movieRating.text = "Classificação: \(movie.voteAverage)"
-        movieDescription.text = movie.overview
+    func configure(with football: Football) {
+        footballCountryName.text = football.countryName
+        footballlCountryLogo.download(path: football.countryLogo)
+        //movieRating.text = "Classificação: \(football.voteAverage)"
+        //movieDescription.text = football.overview
     }
 }

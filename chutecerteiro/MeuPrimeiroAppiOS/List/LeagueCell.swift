@@ -56,9 +56,9 @@ class LeagueCell: UITableViewCell {
         nil
     }
     
-    func configure(league: FootballLeague) {
-        nameLabel.text = league.leagueName
-        seasonLabel.text = "Temporada: \(league.season)"
+    func configure(football: Football) {
+        nameLabel.text = football.leagueName
+        seasonLabel.text = "Temporada: \(football.temporadaLiga)"
         // Use a placeholder image or load league logo if available
     }
     

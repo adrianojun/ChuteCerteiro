@@ -1,7 +1,7 @@
 import UIKit
 
 class LeaguesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    private var leagues: [FootballLeague] = []
+    private var leagues: [Football] = []
     private var countryName: String
     
     private let tableView: UITableView = {
