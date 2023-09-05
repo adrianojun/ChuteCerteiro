@@ -1,6 +1,6 @@
 import UIKit
 
-class DetailViewControllerApagar: UIViewController {
+class ApagarDetailViewController: UIViewController {
 
     @IBOutlet weak var footballCountryName: UILabel!
     @IBOutlet weak var footballlCountryLogo: UIImageView!
