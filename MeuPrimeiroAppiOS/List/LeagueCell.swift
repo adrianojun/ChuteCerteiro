@@ -1,6 +1,6 @@
 import UIKit
 
-class MovieCell: UITableViewCell {
+class ApagarLeagueCell: UITableViewCell {
     
     private let horizontalStack: UIStackView = {
         let stack = UIStackView()
@@ -10,7 +10,7 @@ class MovieCell: UITableViewCell {
         return stack
     }()
     
-    private let imageMoviewView: UIImageView = {
+    private let imageLeagueView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.cornerRadius = 18
@@ -27,7 +27,7 @@ class MovieCell: UITableViewCell {
         return stack
     }()
     
-    private let titleLabel: UILabel = {
+    private let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.textColor = .black
@@ -35,7 +35,7 @@ class MovieCell: UITableViewCell {
         return label
     }()
     
-    private let releaseDateLabel: UILabel = {
+    private let seasonLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .darkGray
@@ -56,10 +56,10 @@ class MovieCell: UITableViewCell {
         nil
     }
     
-    func configure(movie: Movie) {
-        titleLabel.text = movie.title
-        releaseDateLabel.text = "Lançamento: \(movie.releaseDate)"
-        imageMoviewView.download(path: movie.posterPath)
+    func configure(football: Football) {
+        nameLabel.text = football.leagueName
+        seasonLabel.text = "Temporada: \(football.temporadaLiga)"
+        // Use a placeholder image or load league logo if available
     }
     
     private func setupContentView() {
@@ -68,11 +68,11 @@ class MovieCell: UITableViewCell {
     
     private func addViewsInHierarchy() {
         contentView.addSubview(horizontalStack)
-        horizontalStack.addArrangedSubview(imageMoviewView)
+        horizontalStack.addArrangedSubview(imageLeagueView)
         horizontalStack.addArrangedSubview(verticalStack)
         verticalStack.addArrangedSubview(UIView())
-        verticalStack.addArrangedSubview(titleLabel)
-        verticalStack.addArrangedSubview(releaseDateLabel)
+        verticalStack.addArrangedSubview(nameLabel)
+        verticalStack.addArrangedSubview(seasonLabel)
         verticalStack.addArrangedSubview(UIView())
     }
     
@@ -85,8 +85,8 @@ class MovieCell: UITableViewCell {
         ])
         
         NSLayoutConstraint.activate([
-            imageMoviewView.widthAnchor.constraint(equalToConstant: 90),
-            imageMoviewView.heightAnchor.constraint(equalToConstant: 120)
+            imageLeagueView.widthAnchor.constraint(equalToConstant: 90),
+            imageLeagueView.heightAnchor.constraint(equalToConstant: 120)
         ])
     }
 }

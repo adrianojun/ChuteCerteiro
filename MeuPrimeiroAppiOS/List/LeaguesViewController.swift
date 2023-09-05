@@ -1,9 +1,9 @@
 import UIKit
 
 class MoviesViewController: UIViewController {
-    private var movies: [Movie] = []
+    private var leagues: [Football] = []
     
-    private let titleLabel: UILabel = {
+    private let countryName: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -52,22 +52,22 @@ class MoviesViewController: UIViewController {
         ])
     }
 
-    private func fetchRemoteMovies() {
-        let url = URL(string: "https://api.themoviedb.org/3/discover/movie?api_key=2123f7821fc1adc226b8d60b70f445e6&language=pt-BR")!
+    private func fetchRemoteCountries() {
+        let url = URL(string: "https://apifootball.com/api/?action=get_countries&APIkey=fe56acd2acb45d94a9f1331149dc55aa2846896f38ecf1484de36d6a3cea87f0")!
 
         let request = URLRequest(url: url)
 
         let task = URLSession.shared.dataTask(with: request) { data, _, error in
             if error != nil { return }
 
-            guard let moviesData = data else { return }
+            guard let countriesData = data else { return }
 
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
 
-            guard let remoteMovies = try? decoder.decode(TMDBRemoteMovies.self, from: moviesData) else { return }
+            guard let remoteCountries = try? decoder.decode(FootballRemoteLeagues.self, from: countriesData) else { return }
 
-            self.movies = remoteMovies.results
+            self.countries = remoteCountries.results
 
             DispatchQueue.main.async {
                 self.tableView.reloadData()
