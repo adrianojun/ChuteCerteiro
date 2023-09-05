@@ -1,6 +1,6 @@
 import UIKit
 
-class LeaguesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LeaguesViewControllerApagar: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private var leagues: [Football] = []
     private var countryName: String
     

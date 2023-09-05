@@ -1,6 +1,6 @@
 import UIKit
 
-class LeagueCell: UITableViewCell {
+class LeagueCellApagar: UITableViewCell {
     
     private let horizontalStack: UIStackView = {
         let stack = UIStackView()
