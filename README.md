@@ -1,6 +1,6 @@
 # Chute Certeiro
 
-<img width="200" src="chute-certeiro-logo.jpeg">
+![Logo kibada](https://github.com/adianojun/ChuteCerteiro/blob/main/chute-certeiro-logo.jpeg?raw=true)
 
 <hr>
 
@@ -51,23 +51,7 @@ see the GitHub documentation on [how to create a pull request](https://help.gith
 
 ## 🤝 By
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/adrianojun">
-        <img src="Adriano.jpg" width="100px;"/><br>
-        <sub>
-          <b>Adriano Júnior</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/FcoMarcosMAbreu">
-        <img src="Marcos.jpg" width="100px;"/><br>
-        <sub>
-          <b>Marcos Abreu</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+|     |     |
+|:---:|:---:|
+| [![Adriano Júnior](https://github.com/adianojun/ChuteCerteiro/blob/main/Adriano.jpg?raw=true)](https://github.com/adrianojun) | [![Marcos Abreu](https://github.com/adianojun/ChuteCerteiro/blob/main/Marcos.jpg?raw=true)](https://github.com/FcoMarcosMAbreu) |
+| [Adriano Júnior](https://github.com/adrianojun) | [Marcos Abreu](https://github.com/FcoMarcosMAbreu) |
